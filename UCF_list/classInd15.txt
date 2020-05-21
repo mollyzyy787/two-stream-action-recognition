@@ -1,0 +1,15 @@
+1 Archery
+2 BaseballPitch
+3 BodyWeightSquats
+4 CliffDiving
+5 Diving
+6 FloorGymnastics
+7 GolfSwing
+8 JumpingJack
+9 JumpRope
+10 Lunges
+11 MoppingFloor
+12 PullUps
+13 Skiing
+14 TaiChi
+15 WallPushups
