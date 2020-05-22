@@ -63,24 +63,24 @@ def record_info(info,filename,mode):
               'Data {data_time} \n'
               'Loss {loss} '
               'Prec@1 {top1} '
-              'Prec@5 {top5}\n'
+              'Prec@3 {top3}\n'
               'LR {lr}\n'.format(batch_time=info['Batch Time'],
-               data_time=info['Data Time'], loss=info['Loss'], top1=info['Prec@1'], top5=info['Prec@5'],lr=info['lr']))
+               data_time=info['Data Time'], loss=info['Loss'], top1=info['Prec@1'], top3=info['Prec@3'],lr=info['lr']))
         print(result)
 
         df = pd.DataFrame.from_dict(info)
-        column_names = ['Epoch','Batch Time','Data Time','Loss','Prec@1','Prec@5','lr']
+        column_names = ['Epoch','Batch Time','Data Time','Loss','Prec@1','Prec@3','lr']
 
     if mode =='test':
         result = (
               'Time {batch_time} \n'
               'Loss {loss} '
               'Prec@1 {top1} '
-              'Prec@5 {top5} \n'.format( batch_time=info['Batch Time'],
-               loss=info['Loss'], top1=info['Prec@1'], top5=info['Prec@5']))
+              'Prec@3 {top3} \n'.format( batch_time=info['Batch Time'],
+               loss=info['Loss'], top1=info['Prec@1'], top3=info['Prec@3']))
         print(result)
         df = pd.DataFrame.from_dict(info)
-        column_names = ['Epoch','Batch Time','Loss','Prec@1','Prec@5']
+        column_names = ['Epoch','Batch Time','Loss','Prec@1','Prec@3']
 
     if not os.path.isfile(filename):
         df.to_csv(filename,index=False,columns=column_names)

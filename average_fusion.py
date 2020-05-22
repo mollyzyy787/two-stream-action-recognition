@@ -20,10 +20,10 @@ if __name__ == '__main__':
     dataloader = dataloader.spatial_dataloader(BATCH_SIZE=1, num_workers=1,
                                     path='/home/molly/UCF_data/jpegs_256',
                                     ucf_list='/home/molly/two-stream-action-recognition/UCF_list/',
-                                    ucf_split='01')
+                                    ucf_split='04')
     train_loader,val_loader,test_video = dataloader.run()
 
-    video_level_preds = np.zeros((len(rgb.keys()),101))
+    video_level_preds = np.zeros((len(rgb.keys()),15))
     video_level_labels = np.zeros(len(rgb.keys()))
     correct=0
     ii=0
@@ -42,6 +42,6 @@ if __name__ == '__main__':
     video_level_labels = torch.from_numpy(video_level_labels).long()
     video_level_preds = torch.from_numpy(video_level_preds).float()
 
-    top1,top5 = accuracy(video_level_preds, video_level_labels, topk=(1,5))
+    top1,top5 = accuracy(video_level_preds, video_level_labels, topk=(1,3))
 
     print(top1, top5)
