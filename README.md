@@ -1,5 +1,5 @@
 # two-stream-action-recognition-using-pose-flow
-I used a spatial and motion stream cnn with ResNet18 for modeling video information in UCF101 dataset.I have chosen 15 action classes (a subset of UCF101) to train the two-stream network.
+I used a spatial and motion stream cnn with ResNet18 for modeling video information in UCF101 dataset.I have chosen 15 action classes (a subset of UCF101) to train the two-stream network. The 15 selected classes are specified in UCF_list/classInd15.txt
 ## Reference Paper
 *  [[1] Two-stream convolutional networks for action recognition in videos](http://papers.nips.cc/paper/5353-two-stream-convolutional)
 *  [[2] Temporal Segment Networks: Towards Good Practices for Deep Action Recognition](https://link.springer.com/chapter/10.1007/978-3-319-46484-8_2)
