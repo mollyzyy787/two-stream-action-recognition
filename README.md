@@ -43,8 +43,11 @@ I used a spatial and motion stream cnn with ResNet18 for modeling video informat
 ## 4. Testing method
   * For every 3783 testing videos, we uniformly sample 19 frames in each video and the video level prediction is the voting result of all 19 frame level predictions.
   * The reason we choose the number 19 is that the minimun number of video frames in UCF101 is 28 and we have to make sure there are sufficient frames for testing in 10 stack motion stream.
-
-## 7. Testing on Your Device
+## 5. Performance
+<p align="left">
+<img src="https://github.com/mollyzyy787/two-stream-action-recognition-using-pose-flow/conf_matrix.png", width="720">
+</p>
+## 6. Testing on Your Device
   ### Spatial stream
  * Please modify path to the UCF101 dataset on your device.
  * Training and testing
