@@ -25,7 +25,7 @@ import dataloader
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser(description='UCF101 motion stream on resnet101')
-parser.add_argument('--epochs', default=15, type=int, metavar='N', help='number of total epochs')
+parser.add_argument('--epochs', default=50, type=int, metavar='N', help='number of total epochs')
 parser.add_argument('--batch-size', default=8, type=int, metavar='N', help='mini-batch size (default: 8)')
 parser.add_argument('--lr', default=1e-2, type=float, metavar='LR', help='initial learning rate')
 parser.add_argument('--evaluate', dest='evaluate', action='store_true', help='evaluate model on validation set')
@@ -91,6 +91,7 @@ class Motion_CNN():
         #Loss function and optimizer
         self.criterion = nn.CrossEntropyLoss().cuda()
         self.optimizer = torch.optim.SGD(self.model.parameters(), self.lr, momentum=0.9)
+        #self.optimizer = torch.optim.Adam(self.model.parameters(), self.lr, weight_decay=1e-4)
         self.scheduler = ReduceLROnPlateau(self.optimizer, 'min', patience=1,verbose=True)
 
     def resume_and_evaluate(self):

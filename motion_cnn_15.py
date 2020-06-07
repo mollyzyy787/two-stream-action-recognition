@@ -91,6 +91,7 @@ class Motion_CNN():
         #Loss function and optimizer
         self.criterion = nn.CrossEntropyLoss().cuda()
         self.optimizer = torch.optim.SGD(self.model.parameters(), self.lr, momentum=0.9)
+        #self.optimizer = torch.optim.Adam(self.model.parameters(), self.lr, weight_decay=1e-4)
         self.scheduler = ReduceLROnPlateau(self.optimizer, 'min', patience=1,verbose=True)
 
     def resume_and_evaluate(self):

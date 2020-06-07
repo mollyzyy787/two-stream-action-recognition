@@ -8,7 +8,8 @@ import dataloader
 if __name__ == '__main__':
 
     rgb_preds='record/spatial/spatial_video_preds.pickle'
-    opf_preds = 'record/motion/motion_video_preds.pickle'
+    #opf_preds = 'record/motion/motion_video_preds.pickle'
+    opf_preds = 'record/motion_pose/motion_pose_video_preds.pickle'
 
     with open(rgb_preds,'rb') as f:
         rgb =pickle.load(f)
