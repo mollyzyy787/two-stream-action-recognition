@@ -47,6 +47,7 @@ I used a spatial and motion stream cnn with ResNet18 for modeling video informat
 <p align="left">
 <img src="https://github.com/mollyzyy787/two-stream-action-recognition-using-pose-flow/conf_matrix.png", width="720">
 </p>
+
 ## 6. Testing on Your Device
   ### Spatial stream
  * Please modify path to the UCF101 dataset on your device.
