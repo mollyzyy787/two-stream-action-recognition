@@ -45,7 +45,7 @@ I used a spatial and motion stream cnn with ResNet18 for modeling video informat
   * The reason we choose the number 19 is that the minimun number of video frames in UCF101 is 28 and we have to make sure there are sufficient frames for testing in 10 stack motion stream.
 ## 5. Performance
 <p align="left">
-<img src="https://github.com/mollyzyy787/two-stream-action-recognition-using-pose-flow/conf_matrix.png", width="720">
+<img src="conf_matrix.png", width="720">
 </p>
 
 ## 6. Testing on Your Device
